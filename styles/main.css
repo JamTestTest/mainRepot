@@ -1,0 +1,573 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  GENERAL SETTINGS
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+html {
+    width: 100%;
+    height: 100vh;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans";
+    margin: 0;
+}
+/* ------------------------------------------
+  RESPONSIVE LOGO
+--------------------------------------------- */
+.logo {
+  margin: 0 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ------------------------------------------
+  CONTAINERS
+--------------------------------------------- */
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.container-element {
+  width: 49%;
+  height: 50vh;
+  display: inline-block;
+}
+
+/* ------------------------------------------
+  HEADERS
+--------------------------------------------- */
+
+h1 {
+  font-weight: 600;
+  font-size: 3em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+/* ------------------------------------------
+  USUAL TEXT
+--------------------------------------------- */
+.my-usual-text {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ------------------------------------------
+  IMAGES
+--------------------------------------------- */
+.my-image {
+  background-size: cover;
+  min-height: 100vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* ------------------------------------------
+  BUTTONS
+--------------------------------------------- */
+.all-buttons {
+  background-color: #f12241;
+  border-style: none;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  left: 45%;
+}
+
+/* ------------------------------------------
+  RESPONSIVE NAVIGATION MENU, FIXED HEADER
+--------------------------------------------- */
+.fixed-menu {
+  background: #fff;
+  height: 4.75rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-menu-links {
+  padding: 0 2rem;
+  position: absolute;
+  right: 0;
+}
+
+.nav-menu-icon {
+  background: url(../images/hamburg-menu.png) center;
+}
+
+.nav-close-menu-icon {
+  background: url(../images/close-hamburg-menu.png) center;
+}
+
+.nav-menu-icon,
+.nav-close-menu-icon {
+  background-repeat: no-repeat;
+  display: hidden;
+  height: 40px;
+  width: 40px;
+}
+
+.nav-menu {
+  list-style: none;
+}
+
+.nav-menu li {
+  display: inline-block;
+  padding: .9rem
+}
+
+.nav-menu a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width : 768px) {
+  .nav-menu-icon,
+  .nav-close-menu-icon {
+    display:inline-block;
+    margin: 0 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-close-menu-icon {
+    visibility: hidden;
+  }
+
+  .nav-menu li {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    text-align: right;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    color: #fff;
+  }
+
+  .nav-menu-links {
+    background-color: #272727;
+    border: 1px solid #000;
+    height: 50vh;
+    opacity: .8;
+    top: 4.72rem;
+    visibility: hidden;
+    width: 40%;
+  }
+}
+
+.show-menu {
+  visibility: visible;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  INDEX.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------
+  BACKGROUND IMAGE
+--------------------------------------------- */
+.first-background-image {
+  background-image: url(../images/Desktop.png);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.red-rectangle {
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  background-color: #f12241;
+}
+
+@media only screen and (max-width: 768px) and (orientation:landscape) {
+  .first-background-image {
+    background-image: url(../images/Desktop.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation:portrait) {
+  .first-background-image {
+    background-image: url(../images/tabletPortrait.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 544px) and (orientation:landscape) {
+  .first-background-image {
+    background-image: url(../images/mobileLandscape_v2.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 544px) and (orientation:portrait) {
+  .first-background-image {
+    background-image: url(../images/mobilePortrait_v2.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
+}
+
+/* ------------------------------------------
+  CONCEPT
+--------------------------------------------- */
+.our-concept-image {
+  background-image: url(../images/concept.jpg);
+}
+
+.our-concept-project-text {
+  background-color: #615F5F;
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  top: 120px;
+  opacity: 0.8;
+}
+
+/* ------------------------------------------
+  PROJECTS
+--------------------------------------------- */
+.our-project-image {
+  background-color: #c5c2c2;
+}
+
+/* ------------------------------------------
+  CLIENTS
+--------------------------------------------- */
+.our-clients-image {
+  background-color: #c5c2c2;
+}
+
+/* ------------------------------------------
+  ABOUT US
+--------------------------------------------- */
+.our-about-us-image {
+  background-color: #c5c2c2;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  PROJECTS.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------
+  GENERAL SETTINGS FOR PROJECTS
+--------------------------------------------- */
+.all-projects-image {
+  width: 100%;
+}
+
+/* ------------------------------------------
+  BACKGROUND IMAGE
+--------------------------------------------- */
+.our-projects-image {
+  background-color: #c5c2c2;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------
+  PROJECT 1
+--------------------------------------------- */
+
+
+
+/* ------------------------------------------
+  PROJECT 2
+--------------------------------------------- */
+
+
+
+/* ------------------------------------------
+  PROJECT 3
+--------------------------------------------- */
+
+
+
+/* ------------------------------------------
+  PROJECT 4
+--------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  ABOUT.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------
+  
+--------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  CONTACT.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+main {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.ctc {
+    position: relative;
+    left: 0; /* set differently to other buttons - left:0 will set it back to its original position */
+    width: 5rem;
+    height: 2.5rem;
+    color: #fff;
+    font-weight: 100;
+}
+
+.full_name input, other_contact_info input, textarea {
+    border: 0.1rem solid lightgray;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .contact_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 1rem 0 1rem;
+    }
+    
+    #contact_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .full_name {
+        position: relative; /* adjust position of input */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+    }
+    .other_contact_info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .full_name input, other_contact_info input {
+        position: absolute;
+        top: 1.2rem;
+    }
+    .other_contact_info input {
+        position: absolute;
+        top: 1.2rem;
+        
+    }
+}
+/* ------------------------------------------
+  
+--------------------------------------------- */
+
+/* FOOTER */
+
+/* mobile version */
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 100%; /* 100% of the width of the body */
+        height: auto;
+        margin: 0;
+        padding: 2rem 0 0 0; /* top space between footer and main */
+        border-top: solid 0.1rem;
+        border-color: lightgrey;
+    }
+    .footer_header {
+        position: relative; /* need to set position here to we can control the size of its children  */
+        width: 100%;
+        margin: auto;
+        height: auto;
+    }
+
+    /* FOOTER HEADER */
+    .footer_header a{
+        position: relative;
+        width: 100%;
+        height: 5vw;
+        margin: 0;
+    }
+    .footer_header img {
+        position: relative;
+        width: 20%;
+        height: auto;
+        left: 40%;
+    }
+
+    /* FOOTER ADDRESS AND CONTACT */
+    .address_contact {
+        margin: 6% auto 6% auto;
+        text-align: center;
+        color: grey;
+    }
+
+    /* FOOTER SOCIAL */
+
+    nav {
+        position: relative;
+        width: 100%;
+        height: 11vw; /* 15% of viewport width */
+        margin: 1rem; /* 10px */
+       
+    }
+
+    .social ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+        width: 100%;
+        height: 11vw;
+        margin: 0;
+        padding: 0;
+
+    }
+    .social li {
+        position: relative;
+        width: 10%; /* 10% of parent's width */
+        height: 10vw; /* 10% of VIEWPORT WIDTH */
+        margin: 0.3rem;
+    }
+
+    .social a {
+        position: absolute; /* relative to its parent's position */
+        width: 100%; /* 100% of parent's width */
+        height: 10vw; /* 10% of VIEWPORT WIDTH */
+        top: 0; /* placed at the beginning of <nav> (parent element) */
+
+    }
+    .social img{
+        position:relative;
+        width: 100%; /* 100 % of parent's width */
+        height: 10vw; /* 10% of VIEWPORT WIDTH */
+    }
+}
+ /* FOOTER LARGER SCREENS */
+@media screen and (min-width: 1023px) {
+    footer {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-top: solid 0.1rem;
+        border-color: lightgrey;
+        padding: 0;
+    }
+    
+    .footer_header {
+        margin: 5% 8% 0 0; /* add 5% space at the top and 10% space between header and contact */
+    }
+    
+    .address_contact {
+        margin: 5% 0 0 8%; /* add 5% space at the top and add 10% space between header and contact */
+    }
+    
+    .social {
+        position: absolute;
+        width: 50%;
+        height: 5vw;
+        top: 110%;
+        right: 0;
+    }
+    .social ul {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style-type: none;
+        width: 100%;
+        height: 5vw;
+        margin: 0 0 5% 0;
+        padding: 0 0 0 15%;
+    }
+    
+    .social li {
+        position: relative;
+        width: 8%; /* 50% of parent's width */
+        height: 5vw; /* 10% of VIEWPORT WIDTH */
+        margin: 0 1% 0 0;
+    }
+    
+    .social a {
+        position: absolute; /* relative to its parent's position */
+        width: 100%;
+        height: 5vw;
+    }
+     .social img{
+        position:relative;
+        width: 100%; /* 100 % of parent's width */
+        height: auto;
+    }
+    
+}

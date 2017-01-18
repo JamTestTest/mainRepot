@@ -1,0 +1,449 @@
+/* Tap target size recommmended by the Android UI guidelines - 48 CSS pixels  */
+
+/* ==============================================
+   DEFAULT STYLE
+   ============================ */
+
+html {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    /* Make font-size of other elements 
+     * multiple of 10 instead of 16 (16px) 
+    */
+    font-size: 62.5%;  
+}
+
+body {
+    /* 100% of html's width */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+}
+h1 {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+/* FLEXBOX-FIX */
+.flexbox-fix {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    /* TWEENER - IE 10 */
+    display: -ms-flexbox;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: -webkit-flex;
+    display: flex;
+}
+/* ==============================================
+  HEADER SECTION
+  ============================ */
+header {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-heading {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 40.5em) {
+    .contact-heading {
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(contact_background@2x.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+       
+    }
+    .contact-heading h1{
+        position: absolute;
+        /* 100% of .contact-heading's width */
+        width: auto;
+        height: auto;
+        top: 45%;
+        left: 45%;
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+/* ==============================================
+   MAIN SECTION
+   ============================ */
+main {
+    /* minus 2% right and left margins */
+    width: 96%;
+    height: auto;
+    margin: 0 2% 0 2%;
+    padding: 0;
+}
+
+/* CONTACT FORM
+   ============================================================= */
+.contact_box {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    /* needs to update to container elements' margin */
+    margin: 0;
+    
+}
+    
+#contact_form {
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.full_name, 
+.other_contact_info {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 40vw;
+    margin: 1rem 0 0 0;
+}
+
+.full_name input, 
+.other_contact_info input {
+    width: 100%;
+    /* 43px height - 44 (iOS) 48(Android) CSS px recommended */
+    height: 10vw;
+    padding: 0;
+    margin: 0;
+    border: 0.1rem solid lightgray;
+}
+
+label {
+    font-size: 1.6rem;
+    margin: 1rem 0 0.3rem 0;
+}
+
+textarea {
+    /* 100% of .contact_box section element */
+    width: 100%;
+    /* 30% of viewport's width */
+    height: 30vw;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    border: 0.1rem solid lightgray;
+}
+.ctc {
+    position: relative;
+    width: 5rem;
+    height: 2.5rem;
+    margin: 1rem auto 1rem auto;
+    padding: 0;
+    background-color: #f12241;
+    border: none;
+    color: #fff;
+    font-weight: 100;
+   
+}
+@media screen and (min-width: 40.5em) {
+    .contact_box {
+        width: 60%;
+        padding: 0 20% 0 20%;
+    }
+    #contact_form {
+        width: 100%;
+        height: auto;
+    }
+    .full_name, 
+    .other_contact_info {
+        width: 100%;
+        height: 10vw;
+        margin: auto;
+        padding: 0;
+    }
+    .full_name input, 
+    .other_contact_info input {
+        width: 40%;
+        height: 3vw;
+        margin: 0;
+        padding: 0;
+        border: 0.1rem solid lightgray;
+    }
+    label {
+        width: auto;
+        height: auto;
+        /* 0.5 bottom margin */
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+    }
+    textarea {
+        width: 100%;
+        height: 10vw;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* MAP SECTION
+   ============================================================= */
+.map {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.map figure {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.map figure img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==============================================
+   FOOTER
+   ============================ */
+
+footer {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* 100% of the viewport's width */
+    width: 100vw;
+    height: auto;
+    margin: 2rem 0 0 0;
+    /* top space between footer and main */
+    padding: 2rem 0 0 0;
+    border-top: solid 0.1rem;
+    border-color: lightgray;
+}
+.footer_header {
+    /* need to set position here
+     * so we can control the size of its children  
+     */
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+ /* FOTTER HEADER
+    ============================================================= */
+.footer_header a{
+    position: relative;
+    width: 100%;
+    height: 5vw;
+    margin: 0;
+}
+.footer_header img {
+    position: relative;
+    width: 20%;
+    height: auto;
+    left: 40%;
+}
+/* FOTTER ADDRESS AND CONTACT
+   ============================================================= */
+.address_contact {
+    margin: 6% auto 6% auto;
+    text-align: center;
+    color: grey;
+}
+
+/* FOOTER SOCIAL
+   ============================================================= */
+
+footer nav {
+    position: relative;
+    width: 100%;
+    height: 11vw; 
+    margin: 1rem 0 1rem 0;
+       
+}
+
+.social ul {
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    width: 100%;
+    height: 11vw;
+    margin: 0;
+    padding: 0;
+}
+.social li {
+    /* so we can move the child's position */
+    position: relative;
+    /* 10% of parent's width */
+    width: 10%;
+    /* 10% of VIEWPORT WIDTH */
+    height: 10vw;
+    margin: 0.3rem;
+    padding: 0;
+}
+
+.social a {
+    /* relative to its parent's position */
+    position: absolute;
+    /* 100% of parent's width */
+    width: 100%;
+    /* 10% of VIEWPORT WIDTH */
+    height: 10vw;
+    /* placed at the beginning of <nav> (parent element) */
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+}
+.social img{
+    position:relative;
+    /* 100 % of parent's width */
+    width: 100%;
+    /* 10% of VIEWPORT WIDTH */
+    height: 10vw;
+}
+
+ /* FOOTER LARGER SCREENS */
+@media screen and (min-width:40.5em) {
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        width: 60%;
+        height: auto;
+        /* must add a 3% padding in order to 
+         * get a space between the footer and 
+         * main - .footer_ header's margin and padding
+         * doesn't seeem to be working in the latest
+         * version of Firefox. A top margin of 3%
+         * would need to be set for Firefox browser 
+         */
+        padding: 0 20% 0 20%;
+        border-top: solid 0.1rem;
+        border-color: lightgray;
+    }
+    
+    .footer_header {
+        /* need to set the position 
+         * of <a> within the div .footer_header
+         */
+        position: relative;
+        /* 80% of its parent - footer */
+        width: 80%;
+        height: auto;
+        /* margin does not work in firefox 50.1 ?? */
+        margin: 5% 0 0 0;
+        padding: 0;
+    }
+    
+    .footer_header a {
+        /* need to move <a> element to the left
+         * so that its child (<img>) is centered
+         */
+        position: absolute;
+        /* bring <a> to the left */
+        left: 0;
+        /* 100% of div .footer_header */
+        width:100%;
+        /* height set to automatically fits
+         * its children elem height
+         */
+        height: auto;
+    }
+    .footer_header img {
+        width: 20%;
+    }
+    .address_contact {
+        width: 20%;
+        /* add 5% space at the top and add 10% space between header and contact */
+        margin: 5% 0  0;
+        font-size: 1.2rem;
+    }
+    /* There is an issue with margin/padding in Safari.
+     * Social network links are placed a little bit further
+     * right than in Chrome and Firefox
+     */
+    footer nav {
+        position: absolute;
+        width: 60%;
+        height: auto;
+        top: 110%;
+        right: 0;
+        margin: 2% 0 2% 0;
+        padding: 0 20% 0 20%;
+    }
+    .social ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+        width: 25%;
+        height: auto;
+        margin: 0;
+        padding: 0 0 0 75%;
+        list-style-type: none;
+    }
+    
+    .social li {
+        position: relative;
+        /* both width and height set to 4% of viewport's width*/
+        width: 4vw;
+        height: 4vw;
+        /* right margin between social network logos */
+        margin: 0 1% 0 0;
+        padding: 0;
+    }
+    
+    .social a {
+        /* relative to its parent's position */
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .social img {
+        position:relative;
+        width: 100%; /* 100 % of parent's width */
+        height: auto;
+        margin: 0;
+        padding: 0;
+    
+    }
+    
+}
